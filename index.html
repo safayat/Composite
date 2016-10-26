@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Composite Pattern</title>
+  <link rel="stylesheet"  href="css/bootstrap-3.3.7-dist/css/bootstrap-theme.css">
+  <link rel="stylesheet"  href="css/bootstrap-3.3.7-dist/css/bootstrap.css">
+  <link rel="stylesheet"  href="css/bootstrap-3.3.7-dist/css/bootstrap.css.map">
+  <link rel="stylesheet"  href="css/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map">
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<body>
+
+<div ng-controller = "MyController">
+    <h2 style="margin-left: 40%">Composite Pattern</h2>
+    <form action="" method="post" ng-submit="formValidate()" style="margin-left: 20%">
+
+        <h3>General Info</h3>
+        <div class="form-horizontal" style="width: 50%">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">First Name</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="First Name" ng-model="formData.generalInfo.firstName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Last Name</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Middle Name" ng-model="formData.generalInfo.lastName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Middle Name</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Middle Name" ng-model="formData.generalInfo.middleName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Gender</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Gender" ng-model="formData.generalInfo.gender">
+                </div>
+            </div>
+        </div>
+
+        <h3>Address</h3>
+        <div class="form-horizontal" style="width: 50%">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Permanent Address</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Permanent Address" ng-model="formData.address.permanentAddress">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"> Temporary Address</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Temporary Address" ng-model="formData.address.temporaryAddress">
+                </div>
+            </div>
+        </div>
+        <h3>Mail Info</h3>
+        <div class="form-horizontal" style="width: 50%">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="Email" ng-model="formData.eInfo.email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Website</label>
+                <div class="col-sm-10">
+                    <input class="form-control" placeholder="website" ng-model="formData.eInfo.website">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="margin-left: 15%;color: green" class="alert alert-success" ng-show="successMessage">{{successMessage}}</div>
+                <div style="margin-left: 15%;color: red" class="alert alert-error" ng-show="errorMessage">{{errorMessage}}</div>
+            </div>
+        </div>
+
+
+    </form>
+
+
+</div>
+</body>
+</html>
